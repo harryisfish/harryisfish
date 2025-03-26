@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+我想要把当前这个变更提交，也要让仓库只剩下一个 commit 记录，不要过去的记录。然后强制 push
+
+git checkout --orphan temp_branch && git add -A && git commit -m "update README.md" && git branch -D main && git branch -m main && git push -f origin main
